@@ -71,7 +71,12 @@ gameSequency.forEach((point) => {
     } else if (state) {
         console.log(state);
     } else {
-        console.log(`${pointsP1} - ${pointsP2}`);
+        if(pointsP1 === 0){
+            console.log(`Love - ${pointsP2}`)
+        } else if(pointsP2 === 0) {
+            console.log(`${pointsP1} - Love`)
+        } else {
+            console.log(`${pointsP1} - ${pointsP2}`);}  
     }
 })
 
