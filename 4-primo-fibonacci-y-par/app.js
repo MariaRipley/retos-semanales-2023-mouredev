@@ -23,3 +23,23 @@ function isPrimeNumber (number) {
 }
 
 console.log(isPrimeNumber(11));
+
+//Fibonacci: secuencia en la que cada número es la suma de los dos anteriores. Empieza por 01
+function isFibonacciNumber (number) {
+    //Números iniciales de la secuencia de Fibonacci (a = más reciente)
+    let a = 0;
+    let b = 1;
+    //Bucle que calcula los números de Fibonacci hasta llegar a number o superarlo
+    while (a < number) {
+        //Variable para guardar el nuevo valor de a
+        let newNumber = a;
+        //a pasa a ser el penúltimo número dado en la secuencia
+        a = b;
+        //b se convierte en el siguiente número de la secuencia
+        b = newNumber + b;
+    }
+    //Si el valor final de a es igual a number, es true (está en la secuencia Fibonacci)
+    return a === number;
+}
+
+console.log(isFibonacciNumber(9));
