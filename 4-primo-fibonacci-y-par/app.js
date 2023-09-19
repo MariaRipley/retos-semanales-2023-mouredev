@@ -43,3 +43,45 @@ function isFibonacciNumber (number) {
 }
 
 console.log(isFibonacciNumber(9));
+
+//Par: si al dividirlo entre 2 el resto da 0
+function isEvenNumber (number) {
+    if(number % 2 === 0) {
+        return true; 
+    } else {
+        return false;
+    }
+}
+
+console.log(isEvenNumber(4));
+
+//Función general
+function checkNumber (number) {
+    let result = `${number} `;
+
+    if(isPrimeNumber(number)) {
+        result += 'es primo';
+    } else {
+        result += 'no es primo';
+    };
+
+    result += ', ';
+
+    if(isFibonacciNumber(number)) {
+        result += 'es Fibonacci'
+    } else {
+        result += 'no es Fibonacci';
+    }
+
+    result += ' y ';
+
+    if (isEvenNumber(number)) {
+        result += 'es par'; 
+    } else {
+        result += 'es impar'
+    };
+
+    return result;
+}
+
+console.log(checkNumber(5));
